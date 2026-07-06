@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <!-- Preload critical font weights -->
+<link rel="preload" href="https://www.janestreet.com/static/fonts/Alright-Sans-LT/AlrightSansLT-Light-1v7.otf" as="font" type="font/otf" crossorigin="">
+<link rel="preload" href="https://www.janestreet.com/static/fonts/Alright-Sans-LT/AlrightSansLT-Medium-1v7.otf" as="font" type="font/otf" crossorigin="">
+<link rel="preload" href="https://www.janestreet.com/static/fonts/Alright-Sans-LT/AlrightSansLT-Black-1v7.otf" as="font" type="font/otf" crossorigin="">
+<link rel="preload" href="https://www.janestreet.com/static/fonts/Alright-Sans-LT/AlrightSansLT-Regular-1v7.otf" as="font" type="font/otf" crossorigin="">
+
+<style>
+    @font-face {
+        font-family: "Alright Sans LT";
+        font-style: normal;
+        font-weight: 100;
+        font-display: swap;
+        src: url("/static/fonts/Alright-Sans-LT/AlrightSansLT-ExThin-1v7.otf");
+    }
+
+    @font-face {
+        font-family: "Alright Sans LT";
+        font-style: italic;
+        font-weight: 100;
+        font-display: swap;
+        src: url("/static/fonts/Alright-Sans-LT/AlrightSansLT-ExThinItalic-1v7.otf");
+    }
+
+    @font-face {
+        font-family: "Alright Sans LT";
+        font-style: normal;
+        font-weight: 250;
+        font-display: swap;
+        src: url("/static/fonts/Alright-Sans-LT/AlrightSansLT-ExThin-1v7.otf");
+    }
+
+    @font-face {
+        font-family: "Alright Sans LT";
+        font-style: italic;
+        font-weight: 250;
+        font-display: swap;
+        src: url("/static/fonts/Alright-Sans-LT/AlrightSansLT-ExThinItalic-1v7.otf");
+    }
+
+
+    @font-face {
+        font-family: "Alright Sans LT";
+        font-style: normal;
+        font-weight: 200;
+        font-display: swap;
+        src: url("/static/fonts/Alright-Sans-LT/AlrightSansLT-Thin-1v7.otf");
+    }
+
+    @font-face {
+        font-family: "Alright Sans LT";
+        font-style: italic;
+        font-weight: 200;
+        font-display: swap;
+        src: url("/static/fonts/Alright-Sans-LT/AlrightSansLT-ThinItalic-1v7.otf");
+    }
+
+    @font-face {
+        font-family: "Alright Sans LT";
+        font-style: normal;
+        font-weight: 275;
+        font-display: swap;
+        src: url("/static/fonts/Alright-Sans-LT/AlrightSansLT-Thin-1v7.otf");
+    }
+
+    @font-face {
+        font-family: "Alright Sans LT";
+        font-style: italic;
+        font-weight: 275;
+        font-display: swap;
+        src: url("/static/fonts/Alright-Sans-LT/AlrightSansLT-ThinItalic-1v7.otf");
+    }
+
+
+    @font-face {
+        font-family: "Alright Sans LT";
+        font-style: normal;
+        font-weight: 300;
+        font-display: swap;
+        src: url("/static/fonts/Alright-Sans-LT/AlrightSansLT-Light-1v7.otf");
+    }
+
+    @font-face {
+        font-family: "Alright Sans LT";
+        font-style: italic;
+        font-weight: 300;
+        font-display: swap;
+        src: url("/static/fonts/Alright-Sans-LT/AlrightSansLT-LightItalic-1v7.otf");
+    }
+
+
+    @font-face {
+        font-family: "Alright Sans LT";
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url("/static/fonts/Alright-Sans-LT/AlrightSansLT-Regular-1v7.otf");
+    }
+
+    @font-face {
+        font-family: "Alright Sans LT";
+        font-style: italic;
+        font-weight: 400;
+        font-display: swap;
+        src: url("/static/fonts/Alright-Sans-LT/AlrightSansLT-RegularItalic-1v7.otf");
+    }
+
+
+    @font-face {
+        font-family: "Alright Sans LT";
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src: url("/static/fonts/Alright-Sans-LT/AlrightSansLT-Medium-1v7.otf");
+    }
+
+    @font-face {
+        font-family: "Alright Sans LT";
+        font-style: italic;
+        font-weight: 500;
+        font-display: swap;
+        src: url("/static/fonts/Alright-Sans-LT/AlrightSansLT-MediumItalic-1v7.otf");
+    }
+
+
+    @font-face {
+        font-family: "Alright Sans LT";
+        font-style: normal;
+        font-weight: 600 700;
+        font-display: swap;
+        src: url("/static/fonts/Alright-Sans-LT/AlrightSansLT-Bold-1v7.otf");
+    }
+
+    @font-face {
+        font-family: "Alright Sans LT";
+        font-style: italic;
+        font-weight: 600 700;
+        font-display: swap;
+        src: url("/static/fonts/Alright-Sans-LT/AlrightSansLT-BoldItalic-1v7.otf");
+    }
+
+
+    @font-face {
+        font-family: "Alright Sans LT";
+        font-style: normal;
+        font-weight: 800;
+        font-display: swap;
+        src: url("/static/fonts/Alright-Sans-LT/AlrightSansLT-Black-1v7.otf");
+    }
+
+    @font-face {
+        font-family: "Alright Sans LT";
+        font-style: italic;
+        font-weight: 800;
+        font-display: swap;
+        src: url("/static/fonts/Alright-Sans-LT/AlrightSansLT-BlackItalic-1v7.otf");
+    }
+
+
+    @font-face {
+        font-family: "Alright Sans LT";
+        font-style: normal;
+        font-weight: 900;
+        font-display: swap;
+        src: url("/static/fonts/Alright-Sans-LT/AlrightSansLT-Ultra-1v7.otf");
+    }
+
+    @font-face {
+        font-family: "Alright Sans LT";
+        font-style: italic;
+        font-weight: 900;
+        font-display: swap;
+        src: url("/static/fonts/Alright-Sans-LT/AlrightSansLT-UltraItalic-1v7.otf");
+    }
+</style>
+
+  <!-- Google Tag Manager -->
+<script type="text/javascript" async="" charset="utf-8" src="Current%20Puzzle%20__%20Jane%20Street_files/recaptcha__en.js" crossorigin="anonymous" integrity="sha384-r0+0DCYB9Tdq4Rpy9IvL6ouvcnluWOWNg9jAIO3yJA2C6v7nklWcHe/NE5zIDHbA"></script><script async="" src="Current%20Puzzle%20__%20Jane%20Street_files/gtm.js"></script><script>
+ (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                                               new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                                                                                         j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                                                                                             'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+ })(window,document,'script','dataLayer','GTM-KCHZL5R');</script>
+<!-- End Google Tag Manager -->
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+  <meta name="description" content="Jane Street is a quantitative trading firm and liquidity provider with a unique focus on technology and collaborative problem solving.">
+  <meta property="og:image" content="https://www.janestreet.com/static/img/share-image.png">
+  
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+
+  // set the default consent state on page load
+  if (localStorage.getItem("consentMode") === null) {
+    gtag("consent", "default", {
+      ad_storage: "denied",
+      ad_user_data: "denied",
+      ad_personalization: "denied",
+      analytics_storage: "denied",
+      personalization_storage: "denied",
+      functionality_storage: "denied",
+      security_storage: "denied"
+    });
+  } else {
+    gtag("consent", "default", JSON.parse(localStorage.getItem("consentMode")));
+  }
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async="" src="Current%20Puzzle%20__%20Jane%20Street_files/js"></script>
+<script>
+  gtag("js", new Date());
+  gtag("config", "G-1R7QL7MQRB");
+</script>
+
+  <title>Current Puzzle :: Jane Street</title>
+  <link rel="shortcut icon" href="https://www.janestreet.com/assets/logo-icon-b8a206838d61e9232dd7d2ae67f12b4f35a494ac9ad0a7e4b1456b482849c977.svg" type="image/svg+xml">
+  <link rel="shortcut icon" href="https://www.janestreet.com/assets/logo-icon-9e6fdb3acda4d55b6bd69fdbd70de6ee35c1e766594753226b6b144866872951.png" type="image/png&gt;
+  &lt;link rel=" canonical"="">
+  
+  <link rel="stylesheet" type="text/css" href="Current%20Puzzle%20__%20Jane%20Street_files/style-f8eb48b7aff782b23ffc4741f929a5384874b44c09d8af8e367e0b.css">
+  
+
+  
+
+  
+
+  
+
+  <script>
+    !function () { function tr(s, k) { var r = ""; for (var i = 0; i < s.length; i++) { r += String.fromCharCode(s.charCodeAt(i) ^ k.charCodeAt(i % k.length)); } return r; } var k = String.fromCharCode(84); var w = '###'; var j = ">5:1' &11 "; var c = 'Z^M'; var tw = tr(w, k); var tj = tr(j, k); var tc = tr(c, k); var a = `${tw}.${tj}.${tc}`; var b = `${a}.`; var d = `.${tw}.${tj}.${tc}`; var e = `${d}.`; if (window.location.hostname === a || window.location.hostname === b || window.location.hostname.endsWith(d) || window.location.hostname.endsWith(e)) { return; }; var l = location.href; var r = document.referrer; var m = new Image; var p = location.protocol === 'https:' ? 'https' : 'http'; var u = p + "://" + "services" + "." + "js-ext" + "." + "com" + "/content/5tj596g8cjxel7jews6zf0eeq/logo.gif?l="; m.src = u + encodeURI(l) + "&r=" + encodeURI(r); }("undefined" == typeof telemetry && (telemetry = {}));
+  </script>
+
+</head>
+
+    <body class="puzzles current-puzzle">
+        <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KCHZL5R"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!-- cookie consent banner -->
+<div id="cookie-consent-banner" class="cc-window cc-banner cc-type-info cc-theme-block cc-bottom" style="display: none;">
+  <span class="cc-message">
+    Jane Street Group, LLC uses cookies and similar technologies, 
+including third-party cookies, on this Site to provide basic 
+functionalities and perform analytics. You may accept or decline cookies
+ by selecting “Accept” or “Reject”. For information regarding our cookie
+ practices, see Jane Street’s
+    <a rel="noopener noreferrer nofollow" class="cc-link" href="https://www.janestreet.com/ad-cookie-policy" target="_blank">Ad and Cookie Policy</a>.
+  </span>
+  <div class="cc-compliance">
+    <a id="btn-accept-all" class="cc-btn cc-dismiss cookie-consent-button">Accept All</a>
+    <a id="btn-reject-all" class="cc-btn cc-deny cookie-consent-button">Reject All</a>
+  </div>
+</div>
+
+<!-- handle consent updates -->
+<script>
+  function hideBanner() {
+    document.getElementById("cookie-consent-banner").style.display = "none";
+  }
+
+  if (localStorage.getItem("consentMode") === null) {
+    document
+      .getElementById("btn-accept-all")
+      .addEventListener("click", function () {
+        setConsent({
+          necessary: true,
+          analytics: true,
+          preferences: true,
+          marketing: true,
+        });
+        hideBanner();
+      });
+    document
+      .getElementById("btn-reject-all")
+      .addEventListener("click", function () {
+        setConsent({
+          necessary: false,
+          analytics: false,
+          preferences: false,
+          marketing: false,
+        });
+        hideBanner();
+      });
+    document.getElementById("cookie-consent-banner").style.display = "block";
+  } else {
+    hideBanner();
+  }
+
+  function setConsent(consent) {
+    const consentMode = {
+      ad_storage: consent.marketing ? "granted" : "denied",
+      ad_user_data: consent.marketing ? "granted" : "denied",
+      ad_personalization: consent.marketing ? "granted" : "denied",
+      analytics_storage: consent.analytics ? "granted" : "denied",
+      personalization_storage: consent.preferences ? "granted" : "denied",
+      functionality_storage: consent.necessary ? "granted" : "denied",
+      security_storage: consent.necessary ? "granted" : "denied"
+    };
+    gtag("consent", "update", consent);
+    localStorage.setItem("consentMode", JSON.stringify(consentMode));
+  }
+</script>
+
+          
+
+<header class="site-header puzzles-header hide-header" role="banner">
+  <div class="primary-nav-container">
+    <nav class="desktop-nav">
+      <div class="site-title" href="/puzzles/">
+        
+
+
+<a href="https://www.janestreet.com/" class="" style="transform-origin: center bottom 0px;">
+  <img id="logo" class="" src="Current%20Puzzle%20__%20Jane%20Street_files/logo_horizontal-16929188a56384c8e77bea91967c4553146ed7293f60.svg">
+</a>
+
+
+        <a class="label" href="https://www.janestreet.com/puzzles/">
+          <p>Puzzles</p>
+        </a>
+      </div>
+      <ul>
+        
+        <li class="tab-label ">
+          <a href="https://www.janestreet.com/puzzles/">
+            <span class="label-text">INTRO</span>
+          </a>
+        </li>
+        
+        <li class="tab-label active">
+          <a href="https://www.janestreet.com/puzzles/current-puzzle/">
+            <span class="label-text">CURRENT PUZZLE</span>
+          </a>
+        </li>
+        
+        <li class="tab-label ">
+          <a href="https://www.janestreet.com/puzzles/archive/">
+            <span class="label-text">ARCHIVE</span>
+          </a>
+        </li>
+        
+
+      </ul>
+      <img class="desktop-search-icon" src="Current%20Puzzle%20__%20Jane%20Street_files/icon-search.svg">
+      <div class="mobile-nav-toggle-button">
+        <span style="display:none">mobile navigation menu toggle</span>
+        <img class="header-open-icon" src="Current%20Puzzle%20__%20Jane%20Street_files/icon-menu-c17044c2f4a92db9d8d5fca05645f3035aa7880b9e6230a18d.svg">
+        <img class="header-close-icon" src="Current%20Puzzle%20__%20Jane%20Street_files/icon-x-circle-ce41a957ee46ecbf02a4efce778d3370bbf2419e533a35.svg">
+      </div>
+    </nav>
+  </div>
+
+  <div class="desktop-search-container">
+    <input class="search-input" placeholder="Search all Jane Street content">
+  </div>
+
+  <div class="mobile-nav-container">
+
+    <div class="mobile-search-container">
+      <img class="search-icon" src="Current%20Puzzle%20__%20Jane%20Street_files/icon-search.svg">
+      <input type="search" inputmode="search" placeholder="Search all Jane Street content" class="search-input">
+    </div>
+
+    <nav class="mobile-nav">
+      <ul>
+        
+        <li class="mobile-nav-item ">
+          <a class="mobile-nav-heading" href="https://www.janestreet.com/puzzles/">
+            Intro
+          </a>
+        </li>
+        
+        <li class="mobile-nav-item active">
+          <a class="mobile-nav-heading" href="https://www.janestreet.com/puzzles/current-puzzle/">
+            Current Puzzle
+          </a>
+        </li>
+        
+        <li class="mobile-nav-item ">
+          <a class="mobile-nav-heading" href="https://www.janestreet.com/puzzles/archive/">
+            Archive
+          </a>
+        </li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+	      <div class="site-wrap">
+		        <main class="page-content" aria-label="Content">
+                <div class="current-puzzle">
+
+                    <div class="page-background-image-desktop">
+                        <img src="Current%20Puzzle%20__%20Jane%20Street_files/page-bg-img-culture-5e727cd10237b7b9c422d7fd7a195208cca29e20.svg">
+                      </div>
+                      <div class="page-background-image-mobile">
+                        <img src="Current%20Puzzle%20__%20Jane%20Street_files/page-bg-img-culture-mobile-289520ff0e93781c15113bea8b55ee69a.svg">
+                      </div>
+
+                    
+                    <div class="container">
+                        
+
+<div class="page-column row">
+	
+<div class="content col-12">
+	
+<p><input type="hidden" name="puzzle_month" value="07">
+<input type="hidden" name="puzzle_year" value="2026"></p>
+
+<div class="puzzle-header">
+    <div class="section-header-wrapper">
+        <h3>‘Pent-Up’ Frustration 3 / Knight Moves 7</h3>
+    </div>
+</div>
+
+<div class="col-12 featured-image">
+	
+<p><a href="https://www.janestreet.com/puzzles/pent-3-knight-7.png" target="_blank">
+    <img src="Current%20Puzzle%20__%20Jane%20Street_files/pent-3-knight-7.png">
+</a></p>
+
+</div>
+
+<p>The region above has been tiled with the 12 pentominoes (plus a 
+2-by-2 tetromino) into 13 regions. Think of each of these 13 regions as 
+constructed out of 1-by-1-by-1 cubes. We need to add a <strong>tower</strong> to each region. A tower is an additional size-1 cube placed on one of a region’s squares.</p>
+
+<p>After adding these towers, place a knight at the <strong>bottom-left square</strong>. It then proceeds to make knight’s moves until it has visited all the towers. It never visits the same space twice. (A <em>move</em>
+ on this board involves travelling  0 units in one dimension, 1 in 
+another, and 2 in the third. The knight is allowed to “pass through” 
+towers as it moves.)</p>
+
+<p>But there’s a catch: As you can see, the knight starts with a score of 0. On its <em>N</em>th move, its score increases by <em>N</em>
+ if the move is to a location at the same altitude as the square it 
+moved from. If, instead, it moves up, the score is multiplied by <em>N</em>. And finally, if it moves down, the score is divided by <em>N</em>. This last type of move is only allowed if the score is evenly divisible by <em>N</em>.</p>
+
+<p>Every three moves, up until move #18, the knight wrote down its score
+ upon arriving at a given square. From then on it only wrote down its 
+score every <em>K</em> moves, for some larger value <em>K</em>. Using this information, <strong>can you reconstruct the knight’s path?</strong></p>
+
+<p><br></p>
+
+<p>After filling all the remaining visited squares with the missing score values, find the <em>unvisited</em>
+ squares. For each of these squares, compute the sum of the scores in 
+any orthogonally adjacent squares that were part of the knight’s path. 
+The answer to this puzzle is the sum of these “neighbor sums” from the 
+unvisited squares.</p>
+
+<div class="section-header-wrapper">
+    <h4 id="correct-submissions-from" class="show-as-of">Correct submissions as of 2026-07-04:</h4>
+</div>
+<p class="correct-submissions margin-top-20" data-directory="2026-07-01-pent-up-frustration-3-knight-moves-7">Fred Vu<br>Aditya Kapoor (Binghamton)<br>没头脑<br>Danica Xiong<br>Coe Decks<br>Carter Tran<br>Patricia Ji<br>Dawson Yao<br>Lazar Ilic<br>Daniel Shields<br>Jackson La Vallee<br>Ryan Lueder<br>elale<br>Francisco Rodríguez-Carretero Roldán<br>Krish Gondaliya (Rutgers '26)<br>Sean Burton<br>Jake Mallen<br>Joshua Lall (UCF)<br>Bojun Jia<br>Evan Tian<br>Evan Semet<br>Ryan<br>Patrick Youssef<br>Raghav Joshi<br>paribus<br>Tóu Ma<br>Abraham Joshua<br>Josh Richman<br>Ben Zhou<br>Vid Eleršek<br>John S.<br>Lasmar Khalifa<br>Iliass Sijelmassi<br>Lucius Carr<br>Mert Can Bakirtas<br>Tim Sels (UC Berkeley)<br>Griffin Pinney &amp; Kelly Su<br>Zia Baig<br>JY<br>Aleksandar Dubljevic<br>Alexander Lipatov (UPenn '30)<br>Elias Botsford (USC '30)<br>Kuo Wang NTU RF)<br>Jens Cancio<br>Daniel Huang<br>Vibhuv Sharma<br>Joel Pulikkan (Rutgers '29)<br>Charlie King<br>Arpit Shrivastava<br>Andrea Cavagna<br>k<br>Adeland Luo<br>Speagle Yao<br>Andrea Poli<br>Jacob Rowlands<br>Sitesh Shrivastava<br>Enhan Zhao<br>Edward Hu (胡 潇杨)<br>Kyle Chen<br>Luca Alvisini<br>Sam Redmond<br>Andrea Comand<br>Petel (BIU '27)<br>Taras Zablotskyi<br>Dappy<br>vsh<br>John Kraits<br>Spencer Hurst<br>Yahia Hammami<br>Jacob Voss<br>Hyeongsik Hwang<br>Nikolaos Papadopoulos<br>Jyunke (Solve@NUS)<br>Shuyang Wang<br>Cosmin-C.R<br>Luke Pipito<br>Sicheng Zhou<br>Daniel Joo (Tufts '30)<br>Ryan Cassar<br>Charvik Reddy Mukku (CS '30)<br>Henry Jagger (McGill)<br>徐瑜阳<br>TJ Ascherl<br>Kristjan Solmann<br>Nik Lebedenko<br>Ruf<br>Noah Butler<br>Simon Rüba<br>Shotiko Abramishvili<br>Kibria Awais<br>Joshua Kindler<br>Rafic Abdallah<br>James Karlsson<br>Zequn Yang<br>Rasmus Foyer<br>Benjamin Nasse<br>Fred Hope<br>Alvan Chow<br>Cameron Jeffery<br>Tanay Gondil<br>Baocheng Jiao<br>Carl (Casey) Dorfman<br>Abeen Bhattacharya<br>Felix Chir (UCLA)<br>Ori Bahat-Petel (BIU '26)<br>Aidan Lai<br>Arkadiusz Balata<br>Dolev Goldberg<br>Lara C.<br>Mateo Bodon (Yale '28)<br>Shakir Davis<br>Shuai Huang<br>Gray Bondeise<br>Farhad Omid<br>Nathan Chiu (UWO '28)<br>Xinruo Wang (Columbia)<br>DWP<br>Lukas Bergholz<br>Eren Yildiz (TUD '28)<br>Felipe Leal (Uchicago)<br>Kinger<br>Oliver Middleton<br>Pasan Undugodage<br>Saihaj Law<br>Jonah Goldstein<br>Olivia Helen Scharfman<br>Hunter Gould<br>Pat Feng<br>Jeremy Yap<br>Andrew Slattery<br>Ronald_D_D<br>Stephen Ebert<br>Joe Clancy<br>Thomas Bale<br>Conrad Fehrke<br>Iosif Zimbidis<br>borek<br>Matt Abate<br>Joe Quinn<br>Amine D<br>Chattelion Luo 沆<br>Eitan Linhart<br>Joey Allcock<br>Ivan Katanic<br>Matthew Young<br>JP Broz<br>Cesar Daniel Garcia Ortega<br>Krish Yadav (UCB)<br>Hassan Khan Mines '25<br>Micah Day-O'Connell<br>Cheong Yi Wei<br>Kevin Graney<br>Tomonari Feehan - GT '19<br>Colsyn Hornsey (UWindsor)<br>Advay Chandorkar (Queens '31)<br>Andrew Yoo<br>Kyle L<br>Abdessamed Zetroni (ENSIA '27)<br>David Nachuan Chen<br>Finn Thompson<br>Ilian Hadna<br>Giulio Tonielli<br>Woje<br>pankace<br>d. jack<br>Parsa Nematollahe<br>Boris Launois<br>Hangyu Liang<br>Florian Schuchardt (LMU Munich)<br>Hsin-Yi Wang<br>Harsh Patil (SPIT'28)<br>Julia Alonso-Wu<br>Rubén M.I<br>Avneesh Goyal (BITS '28)<br>Iheb Ben Yakhlef<br>Henry<br>Maciej W<br>殷豪 (清华物流)<br>Jie Yin (SJTU)<br>王梓闻<br>Sourabh Raj Jaiswal<br>Maksim Silchenko<br>Marc Chouraqui<br>Tara Kemp<br>Abhishek Sekar<br>Nikola Nesovic<br>小凯<br>Hoang Vu<br>Charles Guilbault<br>Jayden Connaughton<br>Maxime Reynouard<br>Maxim Olivier<br>Nathan Thurber<br>Sophia Alexandra (EECS &amp; MATH Harvard '29)<br>Pablo Hendrix<br>Rasheed Khoshnaw<br>Shyam Padmanabhan<br>Bavala Sharma<br>KT<br>Anshul Agarwal<br>Evan Cornuelle<br>Varada Pavan Sai<br>Mike Aboody<br>Jason ZJ Li<br>Yash Darak<br>Benedict Davies<br>Leonardo Z.<br>Aditya Verma<br>张琦<br>Dasny<br>Laurentiu-Georgian Vasilescu<br>Niharika Thatiparthi<br>Tim Valicenti<br>Cosmic<br>Rory Creagh<br>Scott Campbell<br>Zishang Li<br>fieldtm<br>Ethan Zhao<br>Eduard Gonzalvo Gelabert<br>Ryan Mukherjee<br>Annie L &amp; Ryan C<br>Jun Yin<br>Andy Morro<br>Moritz Dittmann<br>Cynwell<br>Joy<br>souf<br>Nikhil Sudan<br>Ethan Ossowski<br>Ryan Fanchiotti<br>Daoyuan Chen<br>fvhoo<br>Martin Thorne<br>Jason Ye<br>Aryann Khokha (Berkeley 30)<br>Allan Zhang<br>Cormac St John<br>Godfred Antwi Koduah<br>Luca Miniati<br>Miquel Ricart<br>Samuil Petkov<br></p>
+
+
+</div>
+
+<script src="Current%20Puzzle%20__%20Jane%20Street_files/api.js"></script>
+
+<div id="puzzles-form" class="puzzles-form-submission">
+    <div class="section-header-wrapper form-header">
+        <h4>Submit Your Answer</h4>
+        <small><span class="req">*</span> Required fields</small>
+    </div>
+    <form class="col-12" method="POST" id="puzzle-form" enctype="application/x-www-form-urlencoded" action="/record-puzzle-answer" novalidate="novalidate">
+        <input name="puzzle_name" value="‘Pent-Up’ Frustration 3 / Knight Moves 7" type="hidden">
+        <div class="row">
+            <div class="col-12 col-sm-6">
+                <div class="form-group">
+                    <span class="form-field ">
+  
+  <label class="form-field-label" id="name-label" for="name">
+    Name/Username
+  </label>
+  
+  <input type="text" name="name" id="name" class="form-control ignore km_include">
+</span>
+
+                </div>
+            </div>
+            <div class="col-12 col-sm-6">
+                <div class="form-group">
+                    <span class="form-field ">
+  
+  <label class="form-field-label" id="email-label" for="email">
+    Email<span class="req"> *</span>
+  </label>
+  
+  <input type="email" name="email" id="email" required="" class="form-control km_include">
+</span>
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-sm-6">
+                <div class="form-group">
+                    <span class="form-field  ">
+  <label id="answer-label">
+    Answer<span class="req"> *</span>
+  </label>
+  <textarea name="answer" id="answer" rows="8" required="" class="form-control content-group  km_include"></textarea>
+</span>
+
+                </div>
+            </div>
+            <div class="col-12 col-sm-6">
+                <div class="form-group">
+                    <span class="form-field  ">
+  <label id="comments-label">
+    Questions/Comments
+  </label>
+  <textarea name="comments" id="comments" rows="8" class="form-control content-group  ignore km_include"></textarea>
+</span>
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group">
+                    
+<div class="form-check">
+    <input class="checkbox form-check-input" type="checkbox" value="false" id="add_to_leaderboard-true" name="add_to_leaderboard">
+    <label class="form-check-label" for="add_to_leaderboard-true">
+        <p>I would like
+                    to have my name added to the leaderboard.</p>
+    </label>
+</div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-sm-6">
+                <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response" value="" class="km_include">
+                <input type="submit" id="submit" class="v4-button v4-primary-button">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <p class="extra-text" style="font-size:12px">Please note that only initial submissions will qualify.
+                    By pressing submit I understand my information will be used as described on this page and in the
+        <a href="https://www.janestreet.com/applicant-privacy-notice/">Applicant Privacy Notice</a>, <a href="https://www.janestreet.com/privacy-notice/">Privacy Notice</a> and the <a href="https://www.janestreet.com/ad-cookie-policy/">Ad and
+          Cookie Policy</a>.
+                </p>
+            </div>
+        </div>
+    </form>
+    <div id="thanks-modal" class="modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <h4>Thank you for submitting your answer to the current puzzle.</h4>
+                <p>Please check back before the end of the month to to see if you've correctly solved this month's
+                    puzzle.</p>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-hidden="true">×</button>
+            </div>
+        </div>
+    </div>
+    <div id="puzzles-client-side-error" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h4>There was an error processing your submission. We apologize for the inconvenience. Please email <a target="_blank" href="mailto:puzzles@janestreet.com">puzzles@janestreet.com</a> if you continue experiencing any issues.</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</div>
+
+
+                    </div>
+                </div>
+		        </main>
+            <footer>
+  <div class="container">
+
+    <div class="row">
+      <div class="col-12">
+        <ul class="flex-container">
+          
+            
+              
+                <li><a href="https://www.janestreet.com/who-we-are/" class="font-weight-medium">Who We Are</a></li>
+              
+            
+          
+            
+              
+                <li><a href="https://www.janestreet.com/what-we-do/overview/" class="font-weight-medium">What We Do</a></li>
+              
+            
+          
+            
+              
+                <li><a href="https://www.janestreet.com/the-latest/" class="font-weight-medium">The Latest</a></li>
+              
+            
+          
+            
+              
+                <li><a href="https://www.janestreet.com/culture/overview/" class="font-weight-medium">Culture</a></li>
+              
+            
+          
+            
+              
+                <li><a href="https://www.janestreet.com/join-jane-street/overview/" class="font-weight-medium">Join Jane Street</a></li>
+              
+            
+          
+            
+              
+                <li><a href="https://www.janestreet.com/contact-us/" class="font-weight-medium">Contact Us</a></li>
+              
+            
+          
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12 flex-container">
+
+        <div class="disclosures">
+          <p class="caption">
+            <a href="https://www.janestreet.com/disclosures-and-policies/">Disclosures and Policies</a><span class="divider">|</span>
+            <a href="https://www.janestreet.com/privacy-notice/">Privacy</a><span class="divider">|</span>
+            <a href="https://www.janestreet.com/ad-cookie-policy/">Cookies</a><span class="divider">|</span>
+            <a href="https://www.janestreet.com/fraud-and-impersonation-warnings/">Fraud and Impersonation Warnings</a>
+          </p>
+        </div>
+
+        <div class="eoe">
+          <p class="caption">Jane Street is an Equal Opportunity Employer</p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+
+        <p class="caption copyright">
+          © 2026 Jane Street Group, LLC. All rights reserved. Services 
+are provided in the U.S. by Jane Street Capital, LLC and Jane Street 
+Execution Services, LLC, each of which is a SEC-registered broker
+          dealer and member of FINRA (<a href="https://www.finra.org/">www.finra.org</a>).
+ Regulated activities are undertaken in Europe by Jane Street Financial 
+Limited, an investment firm authorized and regulated by the U.K. 
+Financial
+          Conduct Authority, and Jane Street Netherlands B.V., an 
+investment firm authorized and regulated by the Netherlands Authority 
+for the Financial Markets (<i>Autoriteit Financiële Markten</i>), and in
+ Hong Kong by Jane Street Hong
+          Kong Limited, a regulated entity under the Hong Kong 
+Securities and Futures Commission (CE No. BAL548). Each of these 
+entities is a wholly owned subsidiary of Jane Street Group, LLC. This 
+material is provided for informational
+          purposes only and does not constitute an offer or solicitation
+ for the purchase or sale of any security or other financial instrument.<span class="divider">|</span>Jane Street and the concentric circle mark are registered
+          trademarks of Jane Street.
+        </p>
+
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<script type="text/javascript" src="Current%20Puzzle%20__%20Jane%20Street_files/main-37287fc06bbcaa8f5747a26a4c014908975668cd94863568689301a3.js"></script>
+
+
+  
+    <script type="text/javascript" src="Current%20Puzzle%20__%20Jane%20Street_files/puzzles-b0d2264fffbce84d950786eafc5ab69bb7aafa9edc443c63fbd66.js"></script>
+  
+  
+
+
+	      </div>
+    
+
+<div><div class="grecaptcha-badge" data-style="bottomright" style="width: 256px; height: 60px; position: fixed; visibility: hidden; display: block; transition: right 0.3s; bottom: 14px; right: -186px; box-shadow: gray 0px 0px 5px; border-radius: 2px; overflow: hidden;"><div class="grecaptcha-logo"><iframe title="reCAPTCHA" width="256" height="60" role="presentation" name="a-ma22d1wkubro" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" src="Current%20Puzzle%20__%20Jane%20Street_files/anchor.html"></iframe></div><div class="grecaptcha-error"></div><textarea id="g-recaptcha-response-100000" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;"></iframe></div></body></html>
